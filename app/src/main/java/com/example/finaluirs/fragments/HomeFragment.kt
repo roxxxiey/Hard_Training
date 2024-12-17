@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -16,6 +18,8 @@ import com.example.finaluirs.R
 import com.example.finaluirs.adapters.ImageSliderAdapter
 import com.example.finaluirs.adapters.PopularAdapter
 import com.example.finaluirs.models.PopularModel
+import com.example.finaluirs.models.UserViewModel
+
 
 class HomeFragment : Fragment() {
 
@@ -27,6 +31,8 @@ class HomeFragment : Fragment() {
     private lateinit var popularAdapter: PopularAdapter
     private lateinit var listPopular: ArrayList<PopularModel>
     private lateinit var homeRecycleView: RecyclerView
+
+    private lateinit var userViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +64,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val username: TextView = view.findViewById(R.id.user_name)
+
+        // Получаем ViewModel
+        userViewModel = ViewModelProvider(requireActivity()).get(UserViewModel::class.java)
+
+        // Подписываемся на изменения имени пользователя
+        userViewModel.userName.observe(viewLifecycleOwner) { name ->
+            username.text = name
+        }
 
         init()
         setTransfarmer()
