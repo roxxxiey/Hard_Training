@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AnalyticsFragment">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="July 2024"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Today Report"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/calories"
+        android:layout_width="112dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cycling"
+        android:layout_width="222dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calories"
+        app:layout_constraintTop_toTopOf="@+id/calories" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/training_time"
+        android:layout_width="112dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/calories"
+        app:layout_constraintTop_toBottomOf="@+id/calories" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hearth_rate"
+        android:layout_width="199dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/training_time"
+        app:layout_constraintTop_toBottomOf="@+id/training_time" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/steps"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cycling"
+        app:layout_constraintTop_toBottomOf="@+id/cycling" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/keepItup"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/pink"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/steps"
+        app:layout_constraintStart_toStartOf="@+id/steps"
+        app:layout_constraintTop_toBottomOf="@+id/steps">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Keep It Up!"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sleep"
+        android:layout_width="178dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/hearth_rate"
+        app:layout_constraintTop_toBottomOf="@+id/hearth_rate" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/water"
+        android:layout_width="156dp"
+        android:layout_height="128dp"
+        app:layout_constraintEnd_toEndOf="@+id/keepItup"
+        app:layout_constraintTop_toTopOf="@+id/sleep" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

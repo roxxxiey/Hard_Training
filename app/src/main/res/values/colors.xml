@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="btn_black">#192126</color>
+    <color name="lite_green">#55F538</color>
+    <color name="green">#44C32D</color>
+    <color name="lite_grey">#8B8F92</color>
+    <color name="mid_grey">#5E6468</color>
+    <color name="grey">#384046</color>
+    <color name="purple">#A48AED</color>
+    <color name="red">#ED4747</color>
+    <color name="lite_yellow">#FCC46F</color>
+    <color name="lite_blue">#95CCE3</color>
+    <color name="lite_greey">#F1F1F1</color>
+    <color name="pink">#F6CFCF</color>
+
+</resources>
